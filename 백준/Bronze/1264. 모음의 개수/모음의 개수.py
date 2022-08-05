@@ -1,9 +1,11 @@
-while 1:
-    s = input()
-    if s == '#':
-        break
-    cnt = 0
-    for c in s:
-        if c in 'aeiouAEIOU':
-            cnt += 1
-    print(cnt)
+if __name__ == '__main__':
+    v = ['a','e','i','o','u']
+    while True:
+        s = input().lower()
+        if s == '#':
+            break
+        cnt = 0
+        for i in s:
+            if i in v:
+                cnt += 1
+        print(cnt)
