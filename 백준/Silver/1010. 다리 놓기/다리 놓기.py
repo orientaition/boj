@@ -1,15 +1,10 @@
-T = int(input())
-
-for _ in range(T):
-    m, n = map(int, input().split())
-    answer = 1
-    k = n - m
-    
-    while n > k:
-        answer *= n
-        n -= 1
-    while m > 1:
-        answer = answer // m
-        m -= 1
-    
-    print(answer)
+import math
+a = int(input())
+s_li = []
+r_li = []
+for i in range(0,a):
+    n,m = map(int,input().split())
+    s_li.append(n)
+    r_li.append(m)
+for i in range(0,len(s_li)):
+    print(math.comb(r_li[i],s_li[i]))
