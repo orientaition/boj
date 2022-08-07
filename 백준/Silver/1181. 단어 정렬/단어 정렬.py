@@ -1,16 +1,10 @@
-words_num = int(input())
-words_list = []
-
-for _ in range(words_num):
+words= int(input())
+word_li = []
+for _ in range(words):
     word = str(input())
-    word_count = len(word)
-    words_list.append((word, word_count))
-
-
-words_list = list(set(words_list))
-
-
-words_list.sort(key = lambda word: (word[1], word[0]))
-
-for word in words_list:
+    word_c = len(word)
+    word_li.append((word, word_c))
+word_li = list(set(word_li))
+word_li.sort(key = lambda word: (word[1], word[0]))
+for word in word_li:
     print(word[0])
